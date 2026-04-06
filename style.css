@@ -1,0 +1,479 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface-2: #f0f4f8;
+  --border: #dbe3ec;
+  --text: #1f2937;
+  --muted: #667085;
+  --primary: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+  --academic: #1d4ed8;
+  --sports: #16a34a;
+  --admin: #9333ea;
+  --facilities: #ea580c;
+  --student-life: #0f766e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.brand-block h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.topbar-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: min(100%, 420px);
+}
+
+.search-wrap {
+  flex: 1;
+}
+
+.search-wrap input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+.panel,
+.map-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.panel {
+  padding: 18px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.result-count {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-chip {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 10px 14px;
+  transition: 0.2s ease;
+}
+
+.filter-chip.active {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.panel-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.primary-btn,
+.secondary-btn {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.secondary-btn {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.location-list {
+  display: grid;
+  gap: 10px;
+}
+
+.location-item {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  border-radius: 14px;
+  padding: 12px;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.location-item:hover,
+.location-item.active {
+  border-color: var(--primary);
+  background: #eef4ff;
+}
+
+.location-title {
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.location-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.map-card {
+  overflow: hidden;
+}
+
+.map-toolbar {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.map-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.map-stage {
+  padding: 18px;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #edf2f7;
+}
+
+.campus-map {
+  width: 100%;
+  height: auto;
+}
+
+.hotspot-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.hotspot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.hotspot:hover,
+.hotspot.active {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.hotspot::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0.25;
+}
+
+.hotspot-label {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: rgba(17, 24, 39, 0.88);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px 8px;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.hotspot:hover .hotspot-label,
+.hotspot.active .hotspot-label {
+  opacity: 1;
+}
+
+.sticky-panel {
+  position: sticky;
+  top: 20px;
+}
+
+.details-content {
+  display: grid;
+  gap: 14px;
+}
+
+.placeholder-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.placeholder-text,
+.muted-text {
+  margin: 0;
+  color: var(--muted);
+}
+
+.details-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.details-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+.description {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.notes-list,
+.tags-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.tags-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-pill {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+}
+
+.category-academic {
+  background: rgba(29, 78, 216, 0.12);
+  color: var(--academic);
+  border-color: rgba(29, 78, 216, 0.22);
+}
+
+.category-sports {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--sports);
+  border-color: rgba(22, 163, 74, 0.22);
+}
+
+.category-admin {
+  background: rgba(147, 51, 234, 0.12);
+  color: var(--admin);
+  border-color: rgba(147, 51, 234, 0.22);
+}
+
+.category-facilities {
+  background: rgba(234, 88, 12, 0.12);
+  color: var(--facilities);
+  border-color: rgba(234, 88, 12, 0.22);
+}
+
+.category-student-life {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--student-life);
+  border-color: rgba(15, 118, 110, 0.22);
+}
+
+.hotspot-academic {
+  background: var(--academic);
+  color: var(--academic);
+}
+
+.hotspot-sports {
+  background: var(--sports);
+  color: var(--sports);
+}
+
+.hotspot-admin {
+  background: var(--admin);
+  color: var(--admin);
+}
+
+.hotspot-facilities {
+  background: var(--facilities);
+  color: var(--facilities);
+}
+
+.hotspot-student-life {
+  background: var(--student-life);
+  color: var(--student-life);
+}
+
+.empty-state {
+  border: 1px dashed var(--border);
+  padding: 14px;
+  border-radius: 14px;
+  color: var(--muted);
+  background: var(--surface-2);
+}
+
+@media (max-width: 1100px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sticky-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .topbar {
+    flex-direction: column;
+  }
+
+  .topbar-controls {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .brand-block h1 {
+    font-size: 1.6rem;
+  }
+
+  .map-stage {
+    padding: 10px;
+  }
+
+  .hotspot {
+    width: 18px;
+    height: 18px;
+  }
+}

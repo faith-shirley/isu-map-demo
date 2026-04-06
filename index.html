@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"/>
+  <title>ISU Interactive Map Demo</title>
+  <meta
+    name="description"
+    content="Interactive demo map for the International School of Uganda."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <p class="eyebrow">Demo</p>
+        <h1>ISU Interactive Campus Map</h1>
+        <p class="subtitle">
+          Search buildings, filter locations, and click hotspots to view details.
+        </p>
+      </div>
+
+      <div class="topbar-controls">
+        <label class="search-wrap" for="searchInput">
+          <span class="sr-only">Search locations</span>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search for a building, facility, or keyword..."
+            autocomplete="off"
+          />
+        </label>
+
+        <button id="clearSearchBtn" class="secondary-btn" type="button">
+          Clear
+        </button>
+      </div>
+    </header>
+
+    <main class="main-layout">
+      <aside class="sidebar">
+        <section class="panel">
+          <h2>Filters</h2>
+
+          <div id="categoryFilters" class="filter-group"></div>
+
+          <div class="panel-row">
+            <button id="showAllBtn" class="primary-btn" type="button">
+              Show All
+            </button>
+            <button id="resetBtn" class="secondary-btn" type="button">
+              Reset
+            </button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Locations</h2>
+            <span id="resultCount" class="result-count">0</span>
+          </div>
+
+          <div id="locationList" class="location-list"></div>
+        </section>
+      </aside>
+
+      <section class="map-panel">
+        <div class="map-card">
+          <div class="map-toolbar">
+            <p class="map-note">
+              Click a hotspot on the map or choose a location from the list.
+            </p>
+          </div>
+
+          <div class="map-stage">
+            <div id="mapContainer" class="map-container">
+              <img
+                src="assets/map.png"
+                alt="Illustrated ISU campus base map"
+                class="campus-map"
+              />
+              <div id="hotspotLayer" class="hotspot-layer"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="details-panel">
+        <section class="panel sticky-panel">
+          <div id="detailsContent" class="details-content">
+            <p class="placeholder-title">Select a location</p>
+            <p class="placeholder-text">
+              The details for the selected building or facility will appear here.
+            </p>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
