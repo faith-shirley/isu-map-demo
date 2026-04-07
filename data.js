@@ -62,7 +62,7 @@ const mapLocations = [
     type: "Aquatics",
     status: "Demo entry",
     x: 78,
-    y: 42,
+    y: 20,
     description:
       "Swimming facility for PE, training sessions, and aquatic programs.",
     tags: ["swimming", "sports", "aquatics"],
@@ -91,8 +91,8 @@ const mapLocations = [
     category: "facilities",
     type: "Access / Parking",
     status: "Demo entry",
-    x: 63,
-    y: 60,
+    x: 55,
+    y: 50,
     description:
       "Main vehicle parking and arrival zone for staff, visitors, and school access.",
     tags: ["parking", "arrival", "transport"],
