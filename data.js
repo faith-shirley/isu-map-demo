@@ -46,7 +46,7 @@ const mapLocations = [
     type: "Outdoor Sports",
     status: "Demo entry",
     x: 34,
-    y: 68,
+    y: 58,
     description:
       "Main sports field used for football, athletics, PE activities, and school events.",
     tags: ["football", "athletics", "PE"],
@@ -91,8 +91,8 @@ const mapLocations = [
     category: "facilities",
     type: "Access / Parking",
     status: "Demo entry",
-    x: 68,
-    y: 70,
+    x: 63,
+    y: 60,
     description:
       "Main vehicle parking and arrival zone for staff, visitors, and school access.",
     tags: ["parking", "arrival", "transport"],
