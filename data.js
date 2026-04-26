@@ -19,24 +19,23 @@ const mapLocations = [
       "Main teaching and learning cluster. This can later be broken down into individual buildings, departments, and room directories.",
     tags: ["classrooms", "teaching", "departments"],
     notes: [
-      "You can split this into primary, middle school, and high school blocks later.",
-      "Add room numbers and staff names when ready."
+      "To be split into junior school, and high school blocks later.",
+      "To add room numbers and staff names."
     ]
   },
   {
     id: "main-hall",
-    name: "Main Hall",
-    category: "student-life",
-    type: "Assembly / Events",
+    name: "Science Centre",
+    category: "Academic",
+    type: "Science classes / Labs",
     status: "Demo entry",
-    x: 28,
-    y: 49,
+    x: 30,
+    y: 42,
     description:
-      "A major shared space for assemblies, performances, gatherings, and events.",
-    tags: ["events", "assembly", "performance"],
+      "A study space for all things sciences.",
+    tags: ["classes", "lab work", "greenhouse"],
     notes: [
-      "Good place for future event schedules.",
-      "Could later show booking or use status."
+      "Science study space."
     ]
   },
   {
@@ -45,14 +44,13 @@ const mapLocations = [
     category: "sports",
     type: "Outdoor Sports",
     status: "Demo entry",
-    x: 34,
-    y: 58,
+    x: 33,
+    y: 56,
     description:
       "Main sports field used for football, athletics, PE activities, and school events.",
     tags: ["football", "athletics", "PE"],
     notes: [
-      "Could later include sports calendar or fixtures.",
-      "Can also link to nearby spectator or entrance information."
+      "Could later include sports calendar/events info.",
     ]
   },
   {
@@ -61,11 +59,11 @@ const mapLocations = [
     category: "sports",
     type: "Aquatics",
     status: "Demo entry",
-    x: 78,
-    y: 20,
+    x: 79,
+    y: 39,
     description:
       "Swimming facility for PE, training sessions, and aquatic programs.",
-    tags: ["swimming", "sports", "aquatics"],
+    tags: ["swimming", "sports"],
     notes: [
       "Could later include pool rules, times, and coach details."
     ]
@@ -76,28 +74,43 @@ const mapLocations = [
     category: "sports",
     type: "Court Sports",
     status: "Demo entry",
-    x: 86,
+    x: 72,
     y: 52,
     description:
-      "Court area for racket or court-based sports activities.",
+      "Court area for court-based sports activities.",
     tags: ["courts", "sports", "training"],
     notes: [
-      "You can replace this with the official court names later."
+      "To be replaced with official court names later."
     ]
   },
   {
     id: "parking-area",
-    name: "Parking Area",
+    name: "Lower Parking Area",
     category: "facilities",
     type: "Access / Parking",
     status: "Demo entry",
-    x: 55,
-    y: 50,
+    x: 61,
+    y: 59,
     description:
       "Main vehicle parking and arrival zone for staff, visitors, and school access.",
     tags: ["parking", "arrival", "transport"],
     notes: [
-      "Later add pickup, drop-off, or visitor access guidance."
+      "Could add pickup, drop-off, or visitor access guidance."
+    ]
+  },
+  {
+    id: "parking-area",
+    name: "Upper Parking Area",
+    category: "facilities",
+    type: "Access / Parking",
+    status: "Demo entry",
+    x: 70,
+    y: 18,
+    description:
+      "Main vehicle parking and arrival zone for staff, visitors, and school access.",
+    tags: ["parking", "arrival", "transport"],
+    notes: [
+      "Could add pickup, drop-off, or visitor access guidance."
     ]
   },
   {
@@ -106,11 +119,11 @@ const mapLocations = [
     category: "admin",
     type: "Administration",
     status: "Demo entry",
-    x: 73,
-    y: 28,
+    x: 60,
+    y: 45,
     description:
-      "Administrative and operational area. This can later link to offices, admissions, finance, or leadership contacts.",
-    tags: ["admin", "offices", "operations"],
+      "Administrative and operational area.",
+    tags: ["reception", "offices", "operations", "finance"],
     notes: [
       "Could later show office contacts and directions."
     ]
