@@ -248,7 +248,7 @@ button {
 .map-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 1601 / 2263;
+  aspect-ratio: 1601 / 2000;
   border-radius: 20px;
   overflow: hidden;
   background: #edf2f7;
